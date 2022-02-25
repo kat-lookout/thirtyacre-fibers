@@ -18,6 +18,7 @@ export default function ProjectPreview({
                     src={coverImage}
                     height={417}
                     width={556}
+                    placeholder="blur"
                 />
             </div>
             <h3 className="text-3xl mb-3 leading-snug">
