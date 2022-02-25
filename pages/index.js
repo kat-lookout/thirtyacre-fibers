@@ -1,6 +1,6 @@
 import Container from '/components/container'
 import Head from 'next/head'
-import Layout from '/components/Layout'
+import Layout from '/components/layout'
 import CurrentProjects from '/components/current-projects'
 import { getAllProjects } from '/lib/projectAPI'
 
