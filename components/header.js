@@ -8,6 +8,7 @@ export default function Header() {
                     <a className="mr-6" href="/"><img src="/img/smallLogo.png" alt="Thirtyacre Fibers" width="50px" height="50px" /></a>
                     <a className="mr-6 text-denim hover:underline" href="/about">About</a>
                     <a className="mr-6 text-denim hover:underline" href="/projects">Projects</a>
+                    <a className="mr-6 text-denim hover:underline" href="/contact">Contact</a>
                 </nav>
                 <nav className="w-1/2 font-bold text-xl flex justify-end" role="navigation" aria-label="main navigation">
                     <a className="ml-6" href="https://thirtyacrefibers.etsy.com/"><img src="/img/etsy.png" alt="Etsy Shop" /></a>
