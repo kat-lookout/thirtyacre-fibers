@@ -1,6 +1,8 @@
-import { parseISO, format } from 'date-fns'
-
 export default function DateFormatter({ dateString }) {
-    const date = parseISO(dateString)
-    return <time dateTime={dateString}>{format(date, 'LLLL    d, yyyy')}</time>
+    // This isn't the best way to do this, because I'm assuming locale.
+    // But for my purposes, it's enough.
+    const date = new Date(dateString)
+    let formatter = new Intl.DateTimeFormat('en', { dateStyle: 'long' })
+
+    return <time dateTime={dateString}>{formatter.format(date)}</time>
 }
