@@ -12,7 +12,7 @@ export default function About() {
                 <Container className="w-2/3">
                     <div className="flex flex-row flex-nowrap items-center mb-3">
                         <img src="/img/kat.jpg" width="328px" height="auto" className="rounded-full mr-4" alt="A person of indeterminate gender wearing brown glasses and knitted fingerless glove in shades of green, black, red, and white rests their chin in their hands and smiles at the camera." />
-                        <p>Hey, y&apos;all! My name is Kat, and my pronounts are they/them. I am a non-binary knitter, software developer, and general nerd.<br />
+                        <p>Hey, y&apos;all! My name is Kat, and my pronouns are they/them. I am a non-binary knitter, software developer, and general nerd.<br />
                            <br />
                            I love the satisfaction of creating something that is both useful and beautiful, and I am blessed to be able to do so both with yarn and with code.</p>
                     </div>
