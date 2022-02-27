@@ -9,6 +9,7 @@ import { getProjectBySlug, getAllProjects } from '/lib/projectAPI'
 import ProjectTitle from '/components/project-title'
 import Head from 'next/head'
 import markdownToHtml from '/lib/markdownToHtml'
+import AlternateImages from '/components/alternate-images'
 
 export default function Project({ project, moreProjects }) {
     const router = useRouter()
@@ -33,6 +34,7 @@ export default function Project({ project, moreProjects }) {
                                 updateDate={project.updateDate}
                             />
                             <ProjectBody content={project.content} />
+                            {project?.images && <AlternateImages title={project.name} images={project.images} />}
                         </article>
                     </>
                 )}
@@ -49,7 +51,8 @@ export async function getStaticProps({ params }) {
         'updateDate',
         'slug',
         'content',
-        'coverImage'
+        'coverImage',
+        'images'
     ])
     
     const content = await markdownToHtml(project.content || '')

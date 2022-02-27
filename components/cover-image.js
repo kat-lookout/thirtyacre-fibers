@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '/components/image-styles.module.css'
 
-export default function CoverImage({ title, src, slug, height, width }) {
+export default function CoverImage({ title, src, slug, height, width, priority=false }) {
     const image = (
         <Image
           src={src}
@@ -15,6 +15,7 @@ export default function CoverImage({ title, src, slug, height, width }) {
           width={width}
           height={height}
           className={styles.overlap}
+          priority={priority}
         />
     )
     return (

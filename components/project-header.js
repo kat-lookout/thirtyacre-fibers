@@ -7,7 +7,7 @@ export default function ProjectHeader({ title, coverImage, updateDate }) {
         <>
             <ProjectTitle>{title}</ProjectTitle>
             <div className="mb-8 md:mb-16 sm:mx-0">
-                <CoverImage title={title} src={coverImage} height={930} width={1240} placeholder="blur" />
+                <CoverImage title={title} src={coverImage} height={930} width={1240} priority={true} />
             </div>
             <div className="max-w-2xl mx-auto">
                 <div className="mb-6 text-lg">
