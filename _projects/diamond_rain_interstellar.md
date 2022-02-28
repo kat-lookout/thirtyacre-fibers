@@ -13,7 +13,7 @@ images:
 - Yarn: [Insterstellar on Sparkle DK by Laughing Cat Fibers](https://shop.laughingcatfibers.xyz/product/interstellar-made-to-order-uv-light), a little more than 2 skeins
 - Needles: [Knitpicks Sunstruck Interchangeable Circular Needles, size 7](https://www.knitpicks.com/sunstruck-options-interchangeable-circular-set-purple-cables/p/90613)
 
-This is my second Diamond Rain Shawl.  I love how the inspiration for the pattern, (the diamond rain that likely exists on Neptune)[https://www.space.com/diamond-rain-atmosphere-uranus-neptune], pairs so nicely
+This is my second Diamond Rain Shawl.  I love how the inspiration for the pattern, [the diamond rain that likely exists on Neptune](https://www.space.com/diamond-rain-atmosphere-uranus-neptune), pairs so nicely
 with the deep space NASA image inspiration for the yarn colorway.
 
 For those looking closely, you'll see that the last inch or so of the shawl appears to be a slightly different colorway then the rest of the shawl. This is because I misjudged the amount of yarn I would need, and
