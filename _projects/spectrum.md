@@ -1,6 +1,6 @@
 ---
 name: 'Spectrum Mitered Square Throw'
-coverImage: '/projects/spectrum/cover.png'
+coverImage: '/projects/spectrum/cover.jpeg'
 startDate: '2022-01-10'
 updateDate: '2022-02-22'
 ---

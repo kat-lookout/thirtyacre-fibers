@@ -1,6 +1,6 @@
 ---
 name: 'Stacked Up Blocks Afghan'
-coverImage: '/projects/stacked_up_blocks/cover.png'
+coverImage: '/projects/stacked_up_blocks/cover.jpeg'
 startDate: '2022-01-19'
 updateDate: '2022-02-22'
 ---

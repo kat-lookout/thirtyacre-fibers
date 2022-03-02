@@ -7,6 +7,7 @@ export default function ProjectPreview({
     coverImage,
     startDate,
     updateDate,
+    completeDate,
     slug
 }) {
     return (
@@ -26,8 +27,14 @@ export default function ProjectPreview({
                 </Link>
             </h3>
             <div className="text-lg mb-4">
-                Started: <DateFormatter dateString={startDate} /><br />
-                Last Update: <DateFormatter dateString={updateDate} />
+                {startDate?.length && <label>Started: </label>}
+                {startDate?.length && <DateFormatter dateString={startDate} />}
+                {startDate?.length && <br />}
+                {completeDate?.length && <label>Completed: </label>}
+                {completeDate?.length && <DateFormatter dateString={completeDate} />}
+                {completeDate?.length && <br />}
+                {updateDate?.length && <label>Last Update: </label>}
+                {updateDate?.length && <DateFormatter dateString={updateDate} />}
             </div>
         </div>
     )

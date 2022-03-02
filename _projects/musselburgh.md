@@ -1,6 +1,6 @@
 ---
 name: 'Musselburgh Hat'
-coverImage: '/projects/musselburgh/cover.png'
+coverImage: '/projects/musselburgh/cover.jpeg'
 startDate: '2021-11-01'
 updateDate: '2022-02-22'
 ---
