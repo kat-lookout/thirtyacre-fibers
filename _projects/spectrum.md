@@ -1,6 +1,8 @@
 ---
 name: 'Spectrum Mitered Square Throw'
-coverImage: '/projects/spectrum/cover.jpeg'
+coverImage: 
+  src: '/projects/spectrum/cover.jpeg'
+  alt: 'A partially completed blanket with stripes of purple, indigo, blue and green, and a partially completed yellow stripe. Balls of yarn in orange and red lie to the left.'
 startDate: '2022-01-10'
 updateDate: '2022-02-22'
 ---

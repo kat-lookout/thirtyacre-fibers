@@ -1,6 +1,7 @@
 import Header from '/components/header'
 import Footer from '/components/footer'
 import Meta from '/components/meta'
+import Script from 'next/script'
 
 export default function Layout ({ children }) {
     return (
@@ -10,7 +11,16 @@ export default function Layout ({ children }) {
             <div className="min-h-min py-4">
                 <main>{children}</main>
             </div>
+            <Script strategy="afterInteractive" src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js" onLoad={() => {
+                kofiWidgetOverlay.draw('thirtyacrefibers', {
+                    'type': 'floating-chat',
+                    'floating-chat.donateButton.text': 'Support me',
+                    'floating-chat.donateButton.background-color': '#151B8D',
+                    'floating-chat.donateButton.text-color': '#FEFCFF'
+                })
+            }} />
             <Footer />
         </>
     )
 }
+

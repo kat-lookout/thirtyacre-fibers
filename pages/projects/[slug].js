@@ -30,7 +30,8 @@ export default function Project({ project, moreProjects }) {
                             </Head>
                             <ProjectHeader
                                 title={project.name}
-                                coverImage={project.coverImage}
+                                coverImageSrc={project.coverImage.src}
+                                coverImageAlt={project.coverImage.alt}
                                 updateDate={project.updateDate}
                             />
                             <ProjectBody content={project.content} />

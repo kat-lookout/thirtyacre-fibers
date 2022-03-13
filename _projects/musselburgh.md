@@ -1,6 +1,8 @@
 ---
 name: 'Musselburgh Hat'
-coverImage: '/projects/musselburgh/cover.jpeg'
+coverImage: 
+  src: '/projects/musselburgh/cover.jpeg'
+  alt: 'A partially completed hat in a light teal with hints of purple and green on a gray background.'
 startDate: '2021-11-01'
 updateDate: '2022-02-22'
 ---

@@ -12,7 +12,8 @@ export default function CurrentProjects({ projects }) {
                     <ProjectPreview
                         key={project.slug}
                         title={project.name}
-                        coverImage={project.coverImage}
+                        coverImageSrc={project.coverImage.src}
+                        coverImageAlt={project.coverImage.alt}
                         startDate={project.startDate}
                         updateDate={project.updateDate}
                         slug={project.slug}

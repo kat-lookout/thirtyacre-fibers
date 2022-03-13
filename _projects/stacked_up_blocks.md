@@ -1,6 +1,8 @@
 ---
 name: 'Stacked Up Blocks Afghan'
-coverImage: '/projects/stacked_up_blocks/cover.jpeg'
+coverImage: 
+  src: '/projects/stacked_up_blocks/cover.jpeg'
+  alt: 'A partially completed afghan with a three dimensional block motify in lavendar on a gray background.'
 startDate: '2022-01-19'
 updateDate: '2022-02-22'
 ---

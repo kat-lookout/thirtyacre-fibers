@@ -1,12 +1,16 @@
 ---
 name: 'Diamond Rain Shawl'
-coverImage: '/projects/diamond_rain_interstellar/cover.jpeg'
+coverImage: 
+  src: '/projects/diamond_rain_interstellar/cover.jpeg'
+  alt: 'A shawl in shades of purple, black, and blue with a diamond motif along the edge, wrapped around a black dress form.'
 startDate: '2021-09-01'
 completeDate: '2022-02-26'
 updateDate: '2022-02-27'
 images:
-  - '/projects/diamond_rain_interstellar/styled.jpeg'
-  - '/projects/diamond_rain_interstellar/extended.jpeg'
+  - src: '/projects/diamond_rain_interstellar/styled.jpeg'
+    alt: 'A shawl in shades of purple, black, and blue with a diamond motif along the edge, wrapped around a black dress form in front of a wooden fence.'
+  - src: '/projects/diamond_rain_interstellar/extended.jpeg'
+    alt: 'A shawl in shades of purple, black, and blue with a diamond motif along the edge, draped over a wooden fence.'
 ---
 
 - Pattern: [Diamond Rain Shawl](https://www.knitpicks.com/diamond-rain-shawl/p/56249)

@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 export default function ProjectPreview({
     title,
-    coverImage,
+    coverImageSrc,
+    coverImageAlt,
     startDate,
     updateDate,
     completeDate,
@@ -15,8 +16,8 @@ export default function ProjectPreview({
             <div className="mb-5">
                 <CoverImage
                     slug={slug}
-                    title={title}
-                    src={coverImage}
+                    src={coverImageSrc}
+                    alt={coverImageAlt}
                     height={417}
                     width={556}
                 />

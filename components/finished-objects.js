@@ -12,7 +12,8 @@ export default function FinishedObjects({ objects }) {
                     <ProjectPreview
                         key={object.slug}
                         title={object.name}
-                        coverImage={object.coverImage}
+                        coverImageSrc={object.coverImage.src}
+                        coverImageAlt={object.coverImage.alt}
                         startDate={object.startDate}
                         completeDate={object.completeDate}
                         slug={object.slug}
