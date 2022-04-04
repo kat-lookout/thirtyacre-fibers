@@ -15,7 +15,12 @@ images:
       alt: 'A blanket with stripes of purple, indigo, blue, green, yellow, orange, and red. The blanket is draped horizontally over a wooden fence. The orange stripe is on top and is the first visible.'
 ---
 
-- Pattern: Original (recipe coming soon!)
-- Yarn Used: 
-    * [KnitPicks Brava Worsted](https://www.knitpicks.com/yarn/brava-worsted/c/5420219) 1 218 yard skein each of Canary, Grass, Celestial. 1+ skeins each of Red, Yellow, and Denim. 
-    * [Caron Simply Soft](https://www.yarnspirations.com/caron-simply-soft-yarn/H97003.html?dwvar_H97003_color=Cobalt%20Blue&cgid=yarn) Approximately 3/4 315 yard skein Black.
+**Pattern**
+
+Original (recipe coming soon!)
+
+**Yarn Used**
+
+[KnitPicks Brava Worsted](https://www.knitpicks.com/yarn/brava-worsted/c/5420219) 1 218 yard skein each of Canary, Grass, Celestial. 1+ skeins each of Red, Yellow, and Denim. 
+
+[Caron Simply Soft](https://www.yarnspirations.com/caron-simply-soft-yarn/H97003.html?dwvar_H97003_color=Cobalt%20Blue&cgid=yarn) Approximately 3/4 315 yard skein Black.
