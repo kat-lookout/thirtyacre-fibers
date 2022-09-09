@@ -21,7 +21,7 @@ export default function CoverImage({ src, alt, slug, height, width, priority=fal
     return (
         <div className="sm:mx-0">
             { slug ? (
-                <Link as={`/projects/${slug}`} href="/projects/[slug]">
+                <Link as={`/blog/post/${slug}`} href="/blog/post/[slug]">
                     <a aria-label={alt}>{image}</a>
                 </Link>
             ) : (
