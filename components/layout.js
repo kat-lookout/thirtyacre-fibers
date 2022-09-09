@@ -19,6 +19,17 @@ export default function Layout ({ children }) {
                     'floating-chat.donateButton.text-color': '#FEFCFF'
                 })
             }} />
+            <Script strategy="beforeInteractive" onReady={() => {
+                if (window.netlifyIdentity) {
+                    window.netlifyIdentity.on("init", user => {
+                        if (!user) {
+                            window.netlifyIdentity.on("login", () => {
+                                document.location.href = "/admin/"
+                            });
+                        }
+                    });
+                }
+            }}
             <Footer />
         </>
     )

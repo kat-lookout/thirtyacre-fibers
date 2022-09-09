@@ -11,6 +11,7 @@ export default function Meta() {
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="description" content="Thirtyacre Fibers" />
             <title>Thirtyacre Fibers</title>
+            <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
     )
 }
