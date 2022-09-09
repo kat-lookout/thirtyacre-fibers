@@ -10,6 +10,7 @@ export default function Meta() {
             <link rel="shortcut icon" href="/favicons/favicon.icon" />
             <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
             <meta name="description" content="Thirtyacre Fibers" />
+            <title>Thirtyacre Fibers</title>
         </Head>
     )
 }
