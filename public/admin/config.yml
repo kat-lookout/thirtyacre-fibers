@@ -2,7 +2,7 @@ backend:
     name: git-gateway
     branch: master
 publish_mode: editorial_workflow
-media_folder: "blogImage"
+media_folder: "public/blogImage"
 public_folder: "/blogImage"
 collections:
     - name: "blog"
