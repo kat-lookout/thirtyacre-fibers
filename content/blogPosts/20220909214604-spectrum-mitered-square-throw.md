@@ -9,7 +9,11 @@ The inspiration for this particular throw came from several places. I had been m
 
 I never did mail it off to Warm Up America, but I did donate it to help supply an immigrant family from  Venezuela that my church is sponsoring!
 
+<<<<<<< HEAD:content/blogPosts/20220909214119-spectrum-mitered-square-throw.md
 ![An afghan in stripes of red, orange, yellow, green, blue, indigo, and violet draped over a wooden fence.](/blogImage/spectrum_h1.jpeg "Spectrum Mitered Square Throw")
+=======
+![A knitted afghan in stripes of red, orange, yellow, green, blue, indigo, and violet draped horizontally over a wooden fence.](blogImage/spectrum_h1.jpeg "Spectrum Mitered Square Throw")
+>>>>>>> 7c3b82d2497f8e9517d3e1e711c41a42ef64ff56:content/blogPosts/20220909214604-spectrum-mitered-square-throw.md
 
 *Pattern Details*
 
