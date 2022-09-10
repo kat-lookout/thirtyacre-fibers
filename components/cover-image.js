@@ -11,7 +11,7 @@ export default function CoverImage({ src, alt, slug, height, width, priority=fal
           className={cn('shadow-sm', {
               'hover:shadow-md transition-shadow duration-200': slug,
           })}
-          layout="responsive"
+          layout="intrinsic"
           width={width}
           height={height}
           className={styles.overlap}
@@ -19,14 +19,12 @@ export default function CoverImage({ src, alt, slug, height, width, priority=fal
         />
     )
     return (
-        <div className="sm:mx-0">
-            { slug ? (
-                <Link as={`/blog/post/${slug}`} href="/blog/post/[slug]">
-                    <a aria-label={alt}>{image}</a>
-                </Link>
-            ) : (
-                image
-            )}
-        </div>
+        slug ? (
+            <Link as={`/blog/post/${slug}`} href="/blog/post/[slug]">
+                <a aria-label={alt}>{image}</a>
+            </Link>
+        ) : (
+            image
+        )
     )
 }

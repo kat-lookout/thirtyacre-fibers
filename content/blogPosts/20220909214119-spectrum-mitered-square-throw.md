@@ -1,7 +1,7 @@
 ---
 title: Spectrum Mitered Square Throw
 date: 2022-09-09T21:39:39.977Z
-coverImage: img/uploads/cover.jpeg
+coverImage: /blogImage/cover.jpeg
 ---
 OK, I admit it. I have a thing for mitered squares. I first learned about them when I made a [Hue Shift Afghan](https://www.knitpicks.com/hue-shift-afghan/p/41112D), many moons ago. I enjoyed the project so much I made a second one for my niece!
 
@@ -9,7 +9,7 @@ The inspiration for this particular throw came from several places. I had been m
 
 I never did mail it off to Warm Up America, but I did donate it to help supply an immigrant family from  Venezuela that my church is sponsoring!
 
-![An afghan in stripes of red, orange, yellow, green, blue, indigo, and violet draped over a wooden fence.](img/uploads/spectrum_h1.jpeg "Spectrum Mitered Square Throw")
+![An afghan in stripes of red, orange, yellow, green, blue, indigo, and violet draped over a wooden fence.](/blogImage/spectrum_h1.jpeg "Spectrum Mitered Square Throw")
 
 *Pattern Details*
 

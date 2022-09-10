@@ -15,7 +15,13 @@ const importBlogPosts = async () => {
     )
 }
 
-const Index = ({ postsList }) => (
+export default function Index ({ postsList }) {
+    // Sort in reverse chronological order.
+    const posts = postsList.sort((a, b) => (
+        a.attributes.date < b.attributes.date ? 1 : a.attributes.date > b.attributes.date ? -1 : 0
+    ))
+
+    return (
     <Layout>
         <Head>
             <title>Thirtyacre Fibers</title>
@@ -25,17 +31,22 @@ const Index = ({ postsList }) => (
                 <img src="/img/logo.png" width="806px" height="269px" alt="Thirtyacre Fibers" />
                 <p>Fiber artist. Software developer. Cat lover. General nerd.</p>
             </div>
-            {postsList.map((post) => (
-                <PostPreview
-                    title={post.attributes.title}
-                    coverImage={post.attributes.coverImage}
-                    date={post.attributes.date}
-                    slug={post.slug}
-                />
-            ))}
+            <section>
+                <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
+                    { posts.map((post) => (
+                        <PostPreview
+                            title={post.attributes.title}
+                            coverImage={post.attributes.coverImage}
+                            date={post.attributes.date}
+                            slug={post.slug}
+                        />
+                    ))}
+                </div>
+            </section>
         </Container>
     </Layout>
-)
+    )
+}
 
 export async function getStaticProps() {
     const postsList = await importBlogPosts();
@@ -46,5 +57,3 @@ export async function getStaticProps() {
         },
     }
 }
-
-export default Index;
