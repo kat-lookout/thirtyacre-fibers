@@ -11,9 +11,7 @@ async function importBlogPosts () {
 
 export default async function handler(req, res) {
     try {
-        console.log('Ding!');
         const posts = await importBlogPosts()
-        console.log('Dong!');
         const feedItems = posts.map((item) => {
             return `
             <item>
@@ -38,6 +36,6 @@ export default async function handler(req, res) {
         res.status(200).send(feed);
     }
     catch (err) {
-        res.status(500).send({ error : 'Unable to load feed.' });
+        res.status(500).send(err);
     }
 }
