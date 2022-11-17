@@ -9,18 +9,6 @@ async function importBlogPosts () {
     )
 }
 
-function formatDate (date) {
-    const dateObj = new Date(date)
-
-    const dow = weekdays[dateObj.getUTCDay()]
-    const day = dateObj.getUTCDate()
-    const month = months[dateObj.getUTCMonth()]
-    const year = dateObj.getUTCFullYear()
-    const hour = dateObj.getUTCHours()
-    const min = dateObj.getUTCMinutes()
-    const sec = dateObj.getUTCSeconds()
-}
-
 export default async function handler(req, res) {
     const posts = await importBlogPosts()
 
@@ -41,7 +29,6 @@ export default async function handler(req, res) {
             <link>https://www.thirtyacrefibers.com/blog/post/${item.slug}</link>
             <guid>https://www.thirtyacrefibers.com/blog/post/${item.slug}</guid>
             <pubDate>${weekdays[pubDate.getUTCDay()]}, ${pubDate.getUTCDate().toString().padStart(2, '0')} ${months[pubDate.getUTCMonth()]} ${pubDate.getUTCFullYear()} ${pubDate.getUTCHours().toString().padStart(2, '0')}:${pubDate.getUTCMinutes().toString().padStart(2, '0')}:${pubDate.getUTCSeconds().toString().padStart(2, '0')} GMT</pubDate>
-            <description>![CDATA[ ${item.default.html} ]]</description>
         </item>`;
     }).join("")
     const feed = `<?xml version="1.0"?>
