@@ -23,30 +23,36 @@ export default async function handler(req, res) {
         const pubDate  = new Date(item.attributes.date)
 
         return `
-        <item>
+        <entry>
+            <id>https://www.thirtyacrefibers.com/blog/post/${item.slug}</id>
             <title>${item.attributes.title}</title>
-            <author>thirtyacrefibers@gmail.com (Kat Wenger)</author>
-            <link>https://www.thirtyacrefibers.com/blog/post/${item.slug}</link>
-            <guid>https://www.thirtyacrefibers.com/blog/post/${item.slug}</guid>
-            <pubDate>${weekdays[pubDate.getUTCDay()]}, ${pubDate.getUTCDate().toString().padStart(2, '0')} ${months[pubDate.getUTCMonth()]} ${pubDate.getUTCFullYear()} ${pubDate.getUTCHours().toString().padStart(2, '0')}:${pubDate.getUTCMinutes().toString().padStart(2, '0')}:${pubDate.getUTCSeconds().toString().padStart(2, '0')} GMT</pubDate>
-            <description><![CDATA[ ${item.default.html} ]]></description>
-
-        </item>`;
+            <updated>${item.attributes.date}</updated>
+            <author>
+                <name>Kat Wenger</name>
+            </author>
+            <content type="xhtml">
+                <div xmlns="http://www.w3.org/1999/xhtml">
+                    ${item.default.html}
+                </div>
+            </content>
+            <link rel="alternate" href="https://www.thirtyacrefibers.com/blog/post/${item.slug}">
+        </entry>`;
     }).join("")
-    const feed = `<?xml version="1.0"?>
-    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-        <channel>
-            <title>Thirtyacre Fibers</title>
-            <atom:link href="https://www.thirtyacrefibers.com/api/rss" rel="self" type="application/rss+xml" />
-            <link>https://www.thirtyacrefibers.com</link>
-            <description>Fiber artist. Software developer. Cat lover. General nerd.</description>
-            <image>
-                <url>https://www.thirtyacrefibers.com/imag/smallLogo.png</url>
-                <title>Thirtyacre Fibers</title>
-                <link>https://www.thirtyacrefibers.com</link>
-            </image>
-            ${feedItems}
-        </channel>
-    </rss>`
+
+    const feed = `<?xml version="1.0" encoding="utf-8"?>
+    <feed xmlns:atom="http://www.w3.org/2005/Atom">
+        <id>https://www.thirtyacrefibers.com</id>
+        <title type="text">Thirtyacre Fibers</title>
+        <updated>${new Date().toISOString()}</updated>
+        <author>
+            <name>Kat Wenger</name>
+            <email>thirtyacrefibers@gmail.com</email>
+            <uri>https://www.thirtyacrefibers.com/about</ur>
+        </author>
+        <link href="https://www.thirtyacrefibers.com/api/rss" rel="self" type="application/atom+xml" />
+        <icon>https://www.thirtyacrefibers.com/imag/smallLogo.png</icon>
+        <subtitle type="text">Fiber artist. Software developer. Cat lover. General nerd.</subtitle>
+        ${feedItems}
+    </feed>`
     res.status(200).send(feed);
 }
