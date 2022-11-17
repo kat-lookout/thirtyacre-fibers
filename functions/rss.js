@@ -6,7 +6,7 @@ const importBlogPosts = async () =>  {
     return Promise.all(
         markdownFiles.map(async (path) => {
             const markdown = await import(`/context/blogPosts/${path}`)
-            return { ...markdown, slug: path.substring(, path.length - 3) }
+            return { ...markdown, slug: path.substring(0, path.length - 3) }
         })
     )
 }
