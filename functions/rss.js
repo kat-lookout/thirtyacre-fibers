@@ -4,7 +4,7 @@ const gm     = require("gray-matter")
 const path   = require("path");
 
 const importBlogPosts = async () =>  {
-    const postDir = path.join(process.cwd(), 'content/blogPosts');
+    const postDir = path.join(process.cwd(), 'content', 'blogPosts');
     const slugs   = fs.readdirSync(postDir);
 
     return Promise.all(
