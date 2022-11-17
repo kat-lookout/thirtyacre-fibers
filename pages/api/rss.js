@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 async function importBlogPosts () {
     const markdownFiles = require.context('/content/blogPosts', false, /\.md$/).keys().map((relativePath) => relativePath.substring(2))
 
@@ -11,6 +9,18 @@ async function importBlogPosts () {
     )
 }
 
+function formatDate (date) {
+    const dateObj = new Date(date)
+
+    const dow = weekdays[dateObj.getUTCDay()]
+    const day = dateObj.getUTCDate()
+    const month = months[dateObj.getUTCMonth()]
+    const year = dateObj.getUTCFullYear()
+    const hour = dateObj.getUTCHours()
+    const min = dateObj.getUTCMinutes()
+    const sec = dateObj.getUTCSeconds()
+}
+
 export default async function handler(req, res) {
     const posts = await importBlogPosts()
 
@@ -20,7 +30,9 @@ export default async function handler(req, res) {
     })
 
     const feedItems = posts.map((item) => {
-        const pubDate = moment.utc(item.attributes.date).format('ddd, DD MMM YYYY HH:mm:ss')
+        const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        const months   = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        const pubDate  = new Date(item.attributes.date)
 
         return `
         <item>
@@ -28,7 +40,7 @@ export default async function handler(req, res) {
             <author>Kat Wenger</author>
             <link>https://www.thirtyacrefibers.com/blog/post/${item.slug}</link>
             <guid>https://www.thirtyacrefibers.com/blog/post/${item.slug}</guid>
-            <pubDate>${pubDate} GMT</pubDate>
+            <pubDate>${weekdays[pubDate.getUTCDay()]}, ${pubDate.getUTCDate().toString().padStart(2, '0')} ${months[pubDate.getUTCMonth()]} ${pubDate.getUTCFullYear()} ${pubDate.getUTCHours().toString().padStart(2, '0')}:${pubDate.getUTCMinutes().toString().padStart(2, '0')}:${pubDate.getUTCSeconds().toString().padStart(2, '0')} GMT</pubDate>
             <description>![CDATA[ ${item.default.html} ]]</description>
         </item>`;
     }).join("")
