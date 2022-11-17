@@ -25,7 +25,7 @@ export default async function handler(req, res) {
         return `
         <item>
             <title>${item.attributes.title}</title>
-            <author>Kat Wenger</author>
+            <author>thirtyacrefibers@gmail.com (Kat Wenger)</author>
             <link>https://www.thirtyacrefibers.com/blog/post/${item.slug}</link>
             <guid>https://www.thirtyacrefibers.com/blog/post/${item.slug}</guid>
             <pubDate>${weekdays[pubDate.getUTCDay()]}, ${pubDate.getUTCDate().toString().padStart(2, '0')} ${months[pubDate.getUTCMonth()]} ${pubDate.getUTCFullYear()} ${pubDate.getUTCHours().toString().padStart(2, '0')}:${pubDate.getUTCMinutes().toString().padStart(2, '0')}:${pubDate.getUTCSeconds().toString().padStart(2, '0')} GMT</pubDate>
@@ -38,7 +38,11 @@ export default async function handler(req, res) {
             <atom:link href="https://www.thirtyacrefibers.com/api/rss" rel="self" type="application/rss+xml" />
             <link>https://www.thirtyacrefibers.com</link>
             <description>Fiber artist. Software developer. Cat lover. General nerd.</description>
-            <image>https://www.thirtyacrefibers.com/imag/smallLogo.png</image>
+            <image>
+                <url>https://www.thirtyacrefibers.com/imag/smallLogo.png</url>
+                <title>Thirtyacre Fibers</title>
+                <link>https://www.thirtyacrefibers.com</link>
+            </image>
             ${feedItems}
         </channel>
     </rss>`
