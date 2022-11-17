@@ -1,15 +1,15 @@
-const fs     = require("fs")
+const fs     = require("node:fs/promises")
 const https  = require("https")
 const gm     = require("gray-matter")
 const path   = require("path");
 
-const importBlogPosts = async () =>  {
+async function importBlogPosts () {
     const postDir = path.join(process.cwd(), 'content', 'blogPosts');
-    const slugs   = fs.readdirSync(postDir);
+    const slugs   = await fs.readdir(postDir);
 
     return Promise.all(
         slugs.map((slug) => {
-            const fileContents = fs.readFileSync(path.join(postDir, slug))
+            const fileContents = await fs.readFile(path.join(postDir, slug))
             const { data, content } = gm.matter(fileContents)
             return { attributes: data, slug: filename.substring(0, filename.length - 3) }
         })
