@@ -8,7 +8,7 @@ async function importBlogPosts () {
     const slugs   = await fs.readdir(postDir);
 
     return Promise.all(
-        slugs.map((slug) => {
+        slugs.map(async (slug) => {
             const fileContents = await fs.readFile(path.join(postDir, slug))
             const { data, content } = gm.matter(fileContents)
             return { attributes: data, slug: filename.substring(0, filename.length - 3) }
