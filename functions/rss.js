@@ -5,7 +5,7 @@ const path   = require("path");
 
 async function importBlogPosts () {
     const postDir = path.join(process.cwd(), 'content', 'blogPosts');
-    const slugs   = await fs.readdir('./content/blogPosts');
+    const slugs   = await fs.readdir('../content/blogPosts');
 
     return Promise.all(
         slugs.map(async (slug) => {
