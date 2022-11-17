@@ -35,7 +35,7 @@ export default async function handler(req, res) {
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
             <title>Thirtyacre Fibers</title>
-            <atom:link href="https://www.thiryacrefibers.com/api/rss.js" rel="self" type="application/rss+xml" />
+            <atom:link href="https://www.thirtyacrefibers.com/api/rss" rel="self" type="application/rss+xml" />
             <link>https://www.thirtyacrefibers.com</link>
             <description>Fiber artist. Software developer. Cat lover. General nerd.</description>
             <image>https://www.thirtyacrefibers.com/imag/smallLogo.png</image>
