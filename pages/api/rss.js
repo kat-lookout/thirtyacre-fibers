@@ -1,4 +1,4 @@
-const importBlogPosts = async () => {
+async function importBlogPosts () {
     const markdownFiles = require.context('/content/blogPosts', false, /\.md$/).keys().map((relativePath) => relativePath.substring(2))
 
     return Promise.all(
@@ -11,7 +11,9 @@ const importBlogPosts = async () => {
 
 export default async function handler(req, res) {
     try {
+        console.log('Ding!');
         const posts = await importBlogPosts()
+        console.log('Dong!');
         const feedItems = posts.map((item) => {
             return `
             <item>
