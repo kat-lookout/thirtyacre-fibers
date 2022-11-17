@@ -47,7 +47,7 @@ export default async function handler(req, res) {
         <author>
             <name>Kat Wenger</name>
             <email>thirtyacrefibers@gmail.com</email>
-            <uri>https://www.thirtyacrefibers.com/about</ur>
+            <uri>https://www.thirtyacrefibers.com/about</uri>
         </author>
         <link href="https://www.thirtyacrefibers.com/api/rss" rel="self" type="application/atom+xml" />
         <icon>https://www.thirtyacrefibers.com/imag/smallLogo.png</icon>
