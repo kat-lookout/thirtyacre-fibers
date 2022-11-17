@@ -37,7 +37,7 @@ function buildRssItems (items) {
 }
 
 exports.handler = async function (event, context) {
-    const rssFeed = `<?xml version="1.0">
+    const rssFeed = `<?xml version="1.0"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
             <title>Thirtyacre Fibers</title>
