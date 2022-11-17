@@ -1,18 +1,9 @@
 
 const https = require("https")
-const fs = require("fs")
+const fs = require("node:fs/promises")
 
 const importBlogPosts = async () =>  {
-    const markdownFiles = []
-    fs.readdir('/content/blogPosts', (err, files) => {
-        if (err) throw err;
-
-        files.forEach((file) => {
-            if (/\.md$/.test(file)) {
-                markdownFiles.push(file);
-            }
-        })
-    })
+    const markdownFiles = await fs.readdir('/content/blogPosts');
 
     return Promise.all(
         markdownFiles.map(async (path) => {
