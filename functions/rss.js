@@ -1,14 +1,15 @@
 
 const https = require("https")
 const fs = require("node:fs/promises")
+const path = require("path");
 
 const importBlogPosts = async () =>  {
-    const markdownFiles = await fs.readdir('/content/blogPosts');
+    const markdownFiles = await fs.readdir(path.join(process.cwd(), 'content/blogPosts'));
 
     return Promise.all(
-        markdownFiles.map(async (path) => {
-            const markdown = await import(`/context/blogPosts/${path}`)
-            return { ...markdown, slug: path.substring(0, path.length - 3) }
+        markdownFiles.map(async (filename) => {
+            const markdown = await import(`/content/blogPosts/${filename}`)
+            return { ...markdown, slug: filename.substring(0, filename.length - 3) }
         })
     )
 }
