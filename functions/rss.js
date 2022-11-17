@@ -1,7 +1,18 @@
+
 const https = require("https")
+const fs = require("fs")
 
 const importBlogPosts = async () =>  {
-    const markdownFiles = require.context('/content/blogPosts', false, '/\.md$/').keys().map((relativePath) => relativePath.substring(2))
+    const markdownFiles = []
+    fs.readdir('/content/blogPosts', (err, files) => {
+        if (err) throw err;
+
+        files.forEach((file) => {
+            if (/\.md$/.test(file)) {
+                markdownFiles.push(file);
+            }
+        })
+    })
 
     return Promise.all(
         markdownFiles.map(async (path) => {
