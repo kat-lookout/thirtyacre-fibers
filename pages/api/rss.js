@@ -38,8 +38,8 @@ export default async function handler(req, res) {
     }).join("")
 
     const feed = `<?xml version="1.0" encoding="utf-8"?>
-    <feed xmlns:atom="http://www.w3.org/2005/Atom">
-        <id>https://www.thirtyacrefibers.com</id>
+    <feed xmlns="http://www.w3.org/2005/Atom">
+        <id>https://www.thirtyacrefibers.com/</id>
         <title type="text">Thirtyacre Fibers</title>
         <updated>${new Date().toISOString()}</updated>
         <author>
