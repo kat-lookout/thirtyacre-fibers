@@ -52,5 +52,5 @@ export default async function handler(req, res) {
     <subtitle type="text">Fiber artist. Software developer. Cat lover. General nerd.</subtitle>
     ${feedItems}
 </feed>`
-    res.status(200).send(feed);
+    res.setHeader('Content-type', 'application/atom+xml').status(200).send(feed);
 }
