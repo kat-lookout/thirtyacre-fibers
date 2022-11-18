@@ -1,5 +1,4 @@
-const https  = require("https")
-const nfetch = require("node-fetch")
+import fetch from 'node-fetch'
 
 async function getPosts () {
     const posts = await nfetch.fetch('https://www.thirtyacrefibers.com/api/rss');
