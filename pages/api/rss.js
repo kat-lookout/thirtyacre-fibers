@@ -18,9 +18,7 @@ export default async function handler(req, res) {
     })
 
     const feedItems = posts.map((item) => {
-        const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-        const months   = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        const pubDate  = new Date(item.attributes.date)
+        const content = item.default.html.replace(/<(\s*(img|br)[^>]*)>/g, "<$1 />")
 
         return `
         <entry>
@@ -32,10 +30,10 @@ export default async function handler(req, res) {
             </author>
             <content type="xhtml">
                 <div xmlns="http://www.w3.org/1999/xhtml">
-                    ${item.default.html}
+                    ${content}
                 </div>
             </content>
-            <link rel="alternate" href="https://www.thirtyacrefibers.com/blog/post/${item.slug}">
+            <link rel="alternate" href="https://www.thirtyacrefibers.com/blog/post/${item.slug}" />
         </entry>`;
     }).join("")
 
