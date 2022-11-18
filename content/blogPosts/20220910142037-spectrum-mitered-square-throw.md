@@ -9,7 +9,7 @@ The inspiration for this particular throw came from several places. I had been m
 
 I never did mail it off to Warm Up America, but I did donate it to help supply an immigrant family from  Venezuela that my church is sponsoring!
 
-![An afghan with red, orange, yellow, green, blue, indigo, and violet stripes draped horizontally over a wooden fence.](/blogImage/spectrum_h1.jpeg "Spectrum Mitered Square Throw Horizontal")
+![An afghan with red, orange, yellow, green, blue, indigo, and violet stripes draped horizontally over a wooden fence.](https://www.thirtyacrefibers.com/blogImage/spectrum_h1.jpeg "Spectrum Mitered Square Throw Horizontal")
 
 *Pattern Details*
 

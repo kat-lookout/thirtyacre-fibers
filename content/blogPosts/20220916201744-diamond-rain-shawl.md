@@ -7,7 +7,7 @@ This is my second Diamond Rain Shawl. I love how the inspiration for the pattern
 
 For those looking closely, you'll see that the last inch or so of the shawl appears to be a slightly different colorway then the rest of the shawl. This is because I misjudged the amount of yarn I would need, and didn't order enough! The next skein came from a different dye batch that had stronger black and purple tones then the first two skeins. Blocking evened it out a little bit, but I think it still looks awesome! Note to self for the future: always buy at least one skein *more* yarn than you think you need!
 
-![A triangular shawl in shades of purple, black, and blue with a diamond motif along the edges draped over a wooden fence.](/blogImage/diamond_rain_extended.jpeg "Diamond Rain Shawl")
+![A triangular shawl in shades of purple, black, and blue with a diamond motif along the edges draped over a wooden fence.](https://www.thirtyacrefibers.com/blogImage/diamond_rain_extended.jpeg "Diamond Rain Shawl")
 
 *Pattern Details:*
 

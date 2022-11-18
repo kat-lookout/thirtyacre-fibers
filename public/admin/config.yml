@@ -4,6 +4,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "public/blogImage"
 public_folder: "/blogImage"
+site_url: "https://www.thirtyacrefibers.com"
 collections:
     - name: "blog"
       label: "Blog"
