@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 async function getPosts () {
-    const posts = await nfetch.fetch('https://www.thirtyacrefibers.com/api/rss');
+    const posts = await fetch('https://www.thirtyacrefibers.com/api/rss');
 
     return posts.json();
 }
