@@ -1,50 +1,50 @@
-const fs     = require("node:fs/promises")
 const https  = require("https")
-const gm     = require("gray-matter")
-const path   = require("path");
 
-async function importBlogPosts () {
-    const postDir = path.join(process.cwd(), 'content', 'blogPosts');
-    const slugs   = await fs.readdir('../content/blogPosts');
+async function getPosts () {
+    const posts = await fetch('https://www.thirtyacrefibers.com/api/rss');
 
-    return Promise.all(
-        slugs.map(async (slug) => {
-            const fileContents = await fs.readFile(path.join(postDir, slug))
-            const { data, content } = gm.matter(fileContents)
-            return { attributes: data, slug: filename.substring(0, filename.length - 3) }
-        })
-    )
+    return posts.json();
 }
 
-function buildRssItems (items) {
-    return items.map((item) => {
+function buildEntries (posts) {
+    return posts.map((post) => {
         return `
-            <item>
-                <title>${item.attributes.title}</title>
-                <author>Kat Wenger</author>
-                <link>https://www.thirtyacrefibers.com/blog/post/${item.slug}</link>
-                <guid>https://www.thirtyacrefibers.com/blog/post/${item.slug}</guid>
-                <pubDate>${item.attributes.date}</pubDate>
-            </item>
+    <entry>
+        <id>https://www.thirtyacrefibers.com/blog/post/${post.slug}</id>
+        <title>${post.title}</title>
+        <updated>${post.date}</updated>
+        <author><name>Kat Wenger</name></author>
+        <content type="xhtml">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                ${post.content}
+            </div>
+        </content>
+        <link rel="alternate" href="http://www.thirtyacrefibers.com/blog/post/${post.slug}" />
+    </entry>
         `;
     }).join("");
 }
 
 exports.handler = async function (event, context) {
-    const rssFeed = `<?xml version="1.0"?>
-    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-        <channel>
-            <title>Thirtyacre Fibers</title>
-            <atom:link href="https://www.thirtyacrefibers.com/.netlify/functions/rss" rel="self" type="application/rss+xml" />
-            <link>https://www.thirtyacrefibers.com</link>
-            <description>Fiber artist. Software developer. Cat lover. General nerd.</description>
-            ${buildRssItems(await importBlogPosts())}
-        </channel>
-    </rss>`;
+    const feed = `<?xml version="1.0" encoding="utf-8"?>
+<feed version=xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.thirtyacrefibers.com/</id>
+    <title type="text">Thirtyacre Fibers</title>
+    <updated>${new Date().toISOString()}</updated>
+    <author>
+        <name>Kat Wenger</name>
+        <email>thirtyacrefibers@gmail.com</email>
+        <uri>https://www.thirtyacrefibers.com/about</uri>
+    </author>
+    <link href="https://www.thirtyacrefibers/.netlify/functions/rss" rel="self" type="application/atom+xml" />
+    <icon>https://www.thirtyacrefibers.com/img/smallLogo.png</icon>
+    <subtitle type="text">Fiber artist. Software developer. Cat lover. General nerd.</subtitle>
+    ${buildEntries(await getPosts())}
+</feed>`;
 
     return {
         statusCode: 200,
-        contextType: "text/xml",
-        body: rssFeed,
+        contextType: "application/atom+xml",
+        body: feed,
     };
 };

@@ -8,7 +8,7 @@ export default function Meta() {
             <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
             <link rel="manifest" href="/favicons/site.webmanifest" />
             <link rel="shortcut icon" href="/favicons/favicon.icon" />
-            <link rel="alternate" type="application/atom+xml" href="https://www.thirtyacrefibers.com/api/rss" title="Thirtyacre Fibers Atom Feed" />
+            <link rel="alternate" type="application/atom+xml" href="https://www.thirtyacrefibers.com/.netlify/functions/rss" title="Thirtyacre Fibers Atom Feed" />
             <meta name="description" content="Thirtyacre Fibers" />
             <title>Thirtyacre Fibers</title>
             <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
